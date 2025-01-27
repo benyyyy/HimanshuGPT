@@ -6,13 +6,14 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 import { auth } from "../utils/Firebase";
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
+import { BG_URL, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
@@ -43,8 +44,8 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://www.pmindia.gov.in/wp-content/uploads/2022/12/Modi-Ji-Photo-02-e1647325936821.jpg",
+            photoURL:{USER_AVATAR}
+            
           })
             .then(() => {
               // Profile updated!
@@ -63,7 +64,7 @@ const Login = () => {
             });
 
           console.log(user);
-          navigate("/browse");
+      
           // ...
         })
         .catch((error) => {
@@ -83,7 +84,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
+        
           // ...
         })
         .catch((error) => {
@@ -99,7 +100,7 @@ const Login = () => {
       <div className="absolute">
         <img
           className="h-screen object-cover"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BG_URL}
           alt="logo"
         />
       </div>

@@ -30,3 +30,7 @@ Browse page
 netFLix gpt
 search bar
 movie suggesitons
+
+#tmdb
+api key 036b5b055bdde0da65a9508654da1bfb
+api token  eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMzZiNWIwNTViZGRlMGRhNjVhOTUwODY1NGRhMWJmYiIsIm5iZiI6MTczNzk3NzEwMi42NjksInN1YiI6IjY3OTc2ZDBlNzYwZjUxZTE3ZDJiMzNmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.z1NK3BzG3VyTAsRqeo0CzHGBkCTHQsPbsiyl55Me0pI
