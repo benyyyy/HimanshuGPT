@@ -9,6 +9,9 @@ login form
 sigh up form 
 form validation 
 useRef hook
+firebase setup
+deploying our app to production
+create signup user
 
 #features
 login.signup
